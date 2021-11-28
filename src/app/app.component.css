@@ -1,0 +1,6 @@
+/* este archivo solo cambia los estilos del app.component 
+y no afecta a sus hijos */
+
+p{
+    color: gray;
+}
