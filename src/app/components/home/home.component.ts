@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
+  
     <h3>ngStyle</h3>
   <app-ng-style></app-ng-style>
 
