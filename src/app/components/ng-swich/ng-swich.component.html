@@ -13,6 +13,10 @@
     </p>
 </span>
 
+<button type="button" (click)="alerta = 'uu'" class="btn btn-outline-primary">
+    Cambiar
+</button>
+
 <div [ngSwitch]="alerta">
 
     <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
