@@ -7,6 +7,8 @@ import { CssComponent } from './components/css/css.component';
 import { ClasesComponent } from './components/clases/clases.component';
 import { ResaltadoDirective } from './directives/resaltado.directive';
 import { NgSwichComponent } from './components/ng-swich/ng-swich.component';
+import { HomeComponent } from './components/home/home.component';
+import { APP_ROUTING } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { NgSwichComponent } from './components/ng-swich/ng-swich.component';
     CssComponent,
     ClasesComponent,
     ResaltadoDirective,
-    NgSwichComponent
+    NgSwichComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]

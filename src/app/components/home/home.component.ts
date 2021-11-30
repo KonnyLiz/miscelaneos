@@ -1,7 +1,9 @@
-<div class="container main-container">
-  <h1>Demos <small>Angular</small></h1>
-  <hr>
-  <!-- <h3>ngStyle</h3>
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  template: `
+    <h3>ngStyle</h3>
   <app-ng-style></app-ng-style>
 
   <h3 class="mt-5">CSS en un solo componente</h3>
@@ -13,9 +15,9 @@
   </p>
 
   <h3>Procesos asincronos</h3>
-  <app-clases></app-clases> -->
+  <app-clases></app-clases>
 
-  <!-- <h3>Directivas</h3>
+  <h3>Directivas</h3>
 
   <p [appResaltado] = "'orange '">
     Las directivas son aquellas que le ponemos 
@@ -25,12 +27,19 @@
     Estas pueden hacerse personalizadas como en este caso.
     Supongo que debe de usarse cuando se ocupa algo en especifico en muchos lugares.
     Estamos desde el app component.
-  </p> -->
+  </p>
 
-  <!-- <h3>ngSwitch</h3>
-  <app-ng-swich></app-ng-swich> -->
+  <h3>ngSwitch</h3>
+  <app-ng-swich></app-ng-swich>
+  `,
+  styles: [
+  ]
+})
+export class HomeComponent implements OnInit {
 
-  <h3>Rutas y rutas hijas</h3>
-  <router-outlet></router-outlet>
-  
-</div>
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
