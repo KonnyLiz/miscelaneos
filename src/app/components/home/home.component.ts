@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   template: `
   
     <h3>ngStyle</h3>
-  <app-ng-style></app-ng-style>
+    <app-ng-style></app-ng-style>
 
-  <h3 class="mt-5">CSS en un solo componente</h3>
-  <app-css></app-css>
+    <h3 class="mt-5">CSS en un solo componente</h3>
+    <app-css></app-css>
 
-  <p>Este es un parrafo para la prueba del CSS en componente.
-    Esto es muy interesante! Y este es el que esta por defecto.
-    Te saludo desde el app.component.ts
-  </p>
+    <p>Este es un parrafo para la prueba del CSS en componente.
+      Esto es muy interesante! Y este es el que esta por defecto.
+      Te saludo desde el app.component.ts
+    </p>
 
   <h3>Procesos asincronos</h3>
   <app-clases></app-clases>
@@ -36,11 +36,43 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, 
+AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy{
 
-  constructor() { }
+  constructor() {
+    console.log('constructor');
+  }
 
   ngOnInit(): void {
+    console.log('onInit');
+  }
+
+  ngOnChanges(){
+    console.log('onChanges');
+  }
+
+  ngDoCheck(){
+    console.log('DoChecked');
+  }
+
+  ngAfterContentInit(){
+    console.log('aftercontentinit');
+  }
+
+  ngAfterContentChecked(){
+    console.log('aftercontent checked');
+  }
+
+  ngAfterViewInit(){
+    console.log('afterviewinit');
+  }
+
+  ngAfterViewChecked(){
+    console.log('afterviewchecked');
+  }
+
+  ngOnDestroy(){
+    console.log('ondestroy');
   }
 
 }
